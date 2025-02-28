@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 //Importar las rutas
-const routerPlanta= require('./routes/planta');
+const routerPlanta= require('../routes/planta');
 
 //Middleware para manejar el formato json
 app.use(express.json());
