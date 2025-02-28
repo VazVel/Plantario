@@ -1,6 +1,8 @@
 //Librería importada para poder realizar el servidor
 const express = require('express');
 
+const path = require('path');
+
 //Constante usada para manejar el servidor
 const app = express();
 
@@ -19,9 +21,12 @@ app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
 
-//Manejar una petición get en la pagina principal
-app.get('/', (req,res)=>{
-    res.send('<h1>Este es la pagina principal del proyecto prueba1|</h1>')
-})
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Manejar una petición GET en la página principal
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 module.exports = app;
