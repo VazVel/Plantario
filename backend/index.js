@@ -15,13 +15,10 @@ app.use(express.json());
 app.use('/planta', routerPlanta);
 
 // Inicializar el servidor
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
-
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Manejar una petición GET en la página principal
 app.get('/', (req, res) => {
