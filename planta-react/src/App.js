@@ -1,19 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import PrimerComponente from './components/PrimerComponente';
-import SegundoComponente from './components/SegundoComponente';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import InicioSesion from "./pages/inicioSesion.jsx";
+import Inicio from "./pages/Inicio.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> Hola uwu</p>
-        <PrimerComponente/>
-        <hr/>
-        <SegundoComponente/>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Inicio />} />  {/* Página principal */}
+        <Route path="/iniciosesion" element={<InicioSesion />} />
+      </Routes>
+    </Router>
   );
 }
 

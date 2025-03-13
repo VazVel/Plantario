@@ -1,8 +1,8 @@
-import "./inicioSesion.css"
+import "../styles/inicioSesion.css";
 import mundo from "../img/mundo.png";
 
 
-const LoginForm = () => {
+const inicioSesion = () => {
   return (
     <div className="login-container"
         style={{
@@ -44,5 +44,5 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm
+export default inicioSesion
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import './Inicio.css';
+import '../styles/Inicio.css';
 
-const App = () => {
-    const [counter, setCounter] = React.useState(0);
+const Inicio = () => {
+    //const [counter, setCounter] = React.useState(0);
 
 
   //AQUI EN EL RETURN VA EL CUERPO DE LA PAGINA (EL HTML)
@@ -17,4 +17,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Inicio;
