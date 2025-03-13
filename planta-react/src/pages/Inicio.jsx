@@ -2,8 +2,6 @@ import React from 'react'
 import '../styles/Inicio.css';
 
 const Inicio = () => {
-    //const [counter, setCounter] = React.useState(0);
-
 
   //AQUI EN EL RETURN VA EL CUERPO DE LA PAGINA (EL HTML)
   return (
