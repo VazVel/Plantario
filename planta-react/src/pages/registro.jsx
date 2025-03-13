@@ -1,5 +1,5 @@
-import "./registro.css"
 import fondo from "../img/fondo.png";
+import '../styles/registro.css';
 
 const RegistrationForm = () => {
     return (
@@ -7,7 +7,7 @@ const RegistrationForm = () => {
         className="registration-container"
         style={{
           backgroundImage: `url(${fondo})`,
-          backgroundSize: "cover",
+          backgroundSize: "cover", 
           backgroundPosition: "center",
         }}
       >
