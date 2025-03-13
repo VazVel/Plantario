@@ -27,13 +27,13 @@ const inicioSesion = () => {
             </h1>
 
             <div className="form-group">
-              <label htmlFor="username">Ingrese su nombre de Usuario:</label>
-              <input type="text" id="username" className="form-input" />
+              <label className="ay" htmlFor="username">Ingrese su nombre de Usuario:</label>
+              <input type="text" id="username" className="form-inputa" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Ingrese su contraseña</label>
-              <input type="password" id="password" className="form-input" />
+              <label className="by" htmlFor="password">Ingrese su contraseña</label>
+              <input type="password" id="password" className="form-inputb" />
             </div>
 
             <button className="start-button">Comenzar</button>

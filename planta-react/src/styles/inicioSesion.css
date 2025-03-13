@@ -15,10 +15,11 @@
 
   
   /*imagen y formulario */
+    /*Cambie aqui */
   .content-wrapper {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10%;
+    left: 13%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -40,8 +41,8 @@
   }
   
   .form-container {
-    flex: 1;
-    display: flex;
+    flex: 0;
+    display: contents;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -75,15 +76,35 @@
     color: #333;
   }
   
-  .form-input {
-    width: 100%;
+   /*------------------------------------------- */
+  /*AQUI LE CAMBIE */
+  .form-group > .ay{
+    position: absolute;
+    top: 46%;
+  }
+  .form-inputa {
+    width: 310%;
     padding: 12px;
     border: 2px dashed #333;
     border-radius: 10px;
     background-color: #dbf7dc;
     font-size: 16px;
   }
-  
+
+  .form-group > .by{
+    position: absolute;
+    top: 64%;
+  }
+  .form-inputb {
+    width: 310%;
+    padding: 12px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    background-color: #dbf7dc;
+    font-size: 16px;
+    margin-top: 10%;
+  }
+  /*------------------------------------------- */
   .start-button {
     width: 100%;
     padding: 15px;
