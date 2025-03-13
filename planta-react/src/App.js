@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InicioSesion from "./pages/inicioSesion.jsx";
 import Inicio from "./pages/Inicio.jsx";
 
+
 function App() {
   return (
     <Router>

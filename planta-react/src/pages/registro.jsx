@@ -1,5 +1,5 @@
-import fondo from "../img/fondo.png";
 import '../styles/registro.css';
+import fondo from "../img/fondo.png";
 
 const RegistrationForm = () => {
     return (
