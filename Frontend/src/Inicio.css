@@ -34,11 +34,11 @@
   font-family: sans-serif;
   position: absolute;
   top: 39%;
-  border-radius: 15px; /* Ajusta el valor para un borde más redondeado */
-  padding: 10px 20px; /* Agrega un poco de relleno para mejor apariencia */
-  border: none; /* Asegura que no tenga un borde visible */
-  font-size: 13px; /* Ajusta el tamaño del texto */
-  text-align: center; /* Centra el texto dentro del botón */
+  border-radius: 15px; 
+  padding: 10px 20px; 
+  border: none; 
+  font-size: 13px;
+  text-align: center; 
 }
 
 
