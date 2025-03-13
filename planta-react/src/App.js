@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />  {/* Página principal */}
         <Route path="/iniciosesion" element={<InicioSesion />} />
+
       </Routes>
     </Router>
   );
