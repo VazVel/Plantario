@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.Fondo {
+  background: radial-gradient(circle at 0% 0%, #a1e9d7, #bcf0d6, #dbf7dc, #f3fde3);
+}
+
+h1 {
+    font-family: 'Bobby Jones', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    background-color: #00bf63;
+    padding: 3%;
+    margin-top: -42.5%; 
+    width: 100%;
+}
+
+h3{
+    font-family: 'Bobby Jones', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 3.5%;
+    left: 42%;
+    font-weight: normal;
+}
+
+/* Aquí lo del contenedor para Agregar una nueva herramienta */
+.container {
+    position: absolute;
+    top: 17%;
+    left: 5.5%;
+}
+
+.container > div {
+    background-color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -10%;
+    width: 900px;  
+    height: 370px; 
+    border: none;
+}
+
+.Complicated {
+    flex: 1;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 125%;
+    text-align: center;
+    color: #00bf63;
+    margin-left: 50%;
+    margin-top: -39%;
+} 
+
+.imagenRegistrar{
+    background-image: url("../../public/img/RegistroDetalles.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 42.5vw;
+    height: 75vh;
+    display: flex;  
+}
+
+.Fertilizante{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3.7%;
+    margin-left: 53.5%;
+    font-size: 18px;
+}
+
+.FertilizanteP{
+    font-size: 12px;
+    width: 16%;
+    height: 5%;
+    position: absolute;
+    top: 34%;
+    margin-left: 55%;
+    border: none; 
+    border-bottom: 2px solid black; /* Agrega solo la línea inferior */
+    outline: none;
+}
+
+.Podar{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3.5%;
+    margin-left: 53.5%;
+    font-size: 18px;
+}
+
+.PodarP{
+    font-size: 12px;
+    width: 16%;
+    height: 5%;
+    position: absolute;
+    top: 48.5%;
+    margin-left: 55%;
+    border: none;
+     border-bottom: 2px solid black; 
+     outline: none; 
+}
+
+.Composta{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3.5%;
+    margin-left: 53%;
+    font-size: 17px;
+}
+
+.CompostaP{
+    font-size: 12px;
+    width: 16%;
+    height: 5%;
+    position: absolute;
+    top: 62.5%;
+    margin-left: 55%;
+    border: none; /* Quita los bordes */
+     border-bottom: 2px solid black; /* Agrega solo la línea inferior */
+     outline: none; /* Evita el borde azul al hacer clic */
+}
+
+.boton{
+  display: block;
+  width: 40%;
+  margin: 20px auto 10px;
+  padding: 12px;
+  background-color: #7ed957;
+  color: #21522d;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 76%;
+  left: 55%;
+  border: 3px dashed #225d22; /* Borde punteado */
+
+}

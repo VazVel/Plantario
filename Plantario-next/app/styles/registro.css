@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap'); 
+
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal con la imagen de fondo */
+.contenedor-principal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenedor del formulario */
+.contenedor-formulario {
+  background-color: rgba(255, 255, 245, 0.95);
+  width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px dashed #1b5e20;
+}
+
+/* Estilos para el encabezado */
+.encabezado {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.encabezado h1 {
+  color: #1b5e20;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Rubik Spray Paint', sans-serif;
+  font-weight: 100;
+}
+
+.encabezado h2 {
+  color: #4f9141;
+  font-size: 24px;
+  margin-top: 5px;
+  font-family: 'Rubik Spray Paint', sans-serif;
+  font-weight: 100;
+}
+
+/* Estilos para los campos del formulario */
+.campo-formulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.campo-formulario label {
+  color: #1b5e20;
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+
+.campo-formulario input {
+  flex: 2;
+  padding: 8px 12px;
+  border: 1px solid #1b5e20;
+  border-radius: 15px;
+  background-color: #e8f5e9;
+}
+
+/* Estilos para el botón */
+.boton-comenzar {
+  display: block;
+  width: 60%;
+  margin: 20px auto 10px;
+  padding: 12px;
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-comenzar:hover {
+  background-color: #4caf50;
+}
+
+/* Aseguramos que el formulario no necesite scroll */
+form {
+  max-height: calc(100vh - 200px);
+  overflow: visible;
+}
+
