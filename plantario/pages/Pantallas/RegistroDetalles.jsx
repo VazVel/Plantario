@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../styles/RegistroPlanta.css';
+import '../styles/RegistroDetalles.css';
 
 const RegistroPlanta = () => {
 
@@ -45,43 +45,29 @@ const RegistroPlanta = () => {
       <div className='container'>
         <div className='Complicated'>
           <div className="imagenRegistrar"></div>
-          <h2>Registra tu planta y haz crecer tu jardín.</h2>
+          <h2>Cuentanos más de tu planta.</h2>
           
-          <p className='Nombre'>Nombre:</p>
-          <input className='NombreP' type="text" placeholder='Nombre de la Planta'  required autoFocus
+          <p className='Fertilizante'>¿Cada cuántos días le pones fertilizante a tu planta?</p>
+          <input 
+            className='FertilizanteP' type="number" placeholder='1 o 2 veces por semana' required autoFocus
             ref={(el) => (inputsRef.current[0] = el)}
           />
 
-          <p className='Dias'>Días que se riega:</p>
-          <input className='DiasP'  type="number" placeholder='Cada día o cada 2 días' required
+          <p className='Podar'>¿Cada cuánto dáas la sueles podar?</p>
+          <input 
+            className='PodarP' type="number" placeholder='Cada 2 o 3 semanas' required
             ref={(el) => (inputsRef.current[1] = el)}
           />
 
-          <p className='Detalles'>¿Añadir más detalles?</p>
+          <p className='Composta'>¿Cada cúanto agregas composta?</p>
+          <input 
+            className='CompostaP' type="number" placeholder='Cada 1 o 2 semanas' required
+            ref={(el) => (inputsRef.current[2] = el)}
+          />
 
-          {/* Botones con efectos de hover */}
-          <a href="Inicio.jsx">
-            <button className="boton1" onMouseOver={() => handleMouseOver(1)}onMouseOut={handleMouseOut}
-              style={{backgroundColor: botonActivo === 1 ? "#00bf63" : "#7d8078",
-                      color: "black"  
-              }}
-            >
-              Sí
-            </button>
-          </a>
 
           <a href="Inicio.jsx">
-            <button className="boton2"  onMouseOver={() => handleMouseOver(2)}onMouseOut={handleMouseOut}
-              style={{backgroundColor: botonActivo === 2 ? "#00bf63" : "#7d8078",
-                     color: "black"
-              }}
-            >
-              No
-            </button>
-          </a>
-
-          <a href="Inicio.jsx">
-            <button className="boton3"  onMouseOver={() => handleMouseOver(3)} onMouseOut={handleMouseOut}
+            <button className="boton" onMouseOver={() => handleMouseOver(3)} onMouseOut={handleMouseOut}
               style={{ backgroundColor: botonActivo === 3 ? "#00bf63" : "#7ed957",
                        color: "#21522d"
               }}

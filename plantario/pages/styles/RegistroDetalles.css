@@ -57,7 +57,7 @@ h2{
 } 
 
 .imagenRegistrar{
-    background-image: url("../img/RegistraPlanta.png");
+    background-image: url("../img/RegistroDetalles.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,80 +67,64 @@ h2{
     display: flex;  
 }
 
-.Nombre{
+.Fertilizante{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3.7%;
     margin-left: 53.5%;
     font-size: 18px;
 }
 
-.NombreP{
+.FertilizanteP{
     font-size: 12px;
-    width: 24.5%;
+    width: 16%;
     height: 5%;
     position: absolute;
-    top: 30%;
-    margin-left: 72%;
-    border: none; /* Quita los bordes */
+    top: 34%;
+    margin-left: 55%;
+    border: none; 
     border-bottom: 2px solid black; /* Agrega solo la línea inferior */
-    outline: none; /* Evita el borde azul al hacer clic */
+    outline: none;
 }
 
-.Dias{
+.Podar{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3.5%;
     margin-left: 53.5%;
     font-size: 18px;
 }
 
-.DiasP{
+.PodarP{
     font-size: 12px;
-    width: 24.5%;
+    width: 16%;
     height: 5%;
     position: absolute;
-    top: 44%;
-    margin-left: 72%;
-    border: none; /* Quita los bordes */
-     border-bottom: 2px solid black; /* Agrega solo la línea inferior */
-     outline: none; /* Evita el borde azul al hacer clic */
+    top: 48.5%;
+    margin-left: 55%;
+    border: none;
+     border-bottom: 2px solid black; 
+     outline: none; 
 }
 
-.Detalles{
+.Composta{
     font-family: 'Open Sans', sans-serif;
     margin-top: 3.5%;
     margin-left: 53%;
     font-size: 17px;
 }
 
-.boton1{
-    font-size: 13px;
-    font-family: 'Bobby Jones', sans-serif;
-    color: black;
-    background-color: #d9d9d9;
-    text-align: center;
-    border: none;
-    padding: 6px;
-    width: 8%;
-    margin-left: 73%;
+.CompostaP{
+    font-size: 12px;
+    width: 16%;
+    height: 5%;
     position: absolute;
-    top: 57%;
+    top: 62.5%;
+    margin-left: 55%;
+    border: none; /* Quita los bordes */
+     border-bottom: 2px solid black; /* Agrega solo la línea inferior */
+     outline: none; /* Evita el borde azul al hacer clic */
 }
 
-.boton2{
-    font-size: 13px;
-    font-family: 'Bobby Jones', sans-serif;
-    color: black;
-    background-color: #d9d9d9;
-    text-align: center;
-    border: none;
-    padding: 6px;
-    width: 8%;
-    margin-left: 84%;
-    position: absolute;
-    top: 57%;
-}
-
-.boton3{
+.boton{
   display: block;
   width: 40%;
   margin: 20px auto 10px;
