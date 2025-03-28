@@ -1,0 +1,216 @@
+/* Variables de colores */
+:root {
+    --primary-green: #00c853;
+    --light-green: #b9e9d1;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --button-green: #8eda65;
+  }
+  
+  /* Estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  body {
+    background-color: var(--light-green);
+  }
+  
+  /* Contenedor principal */
+  .plantario-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilos del encabezado */
+  .plantario-header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plantario-title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Contenido principal */
+  .plantario-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sección hero */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-title {
+    color: var(--primary-green);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    max-width: 400px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+  }
+  
+  .new-plant-button {
+    background-color: var(--button-green);
+    color: var(--text-dark);
+    border: 2px dashed #333;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .new-plant-button:hover {
+    background-color: #7bc752;
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+  
+  /* Título de herramientas */
+  .tools-title {
+    text-align: center;
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de herramientas */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .tool-card {
+    background-color: var(--button-green);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .tool-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tool-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .tool-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      margin-bottom: 20px;
+    }
+  
+    .hero-title {
+      max-width: 100%;
+    }
+  
+    .hero-image {
+      justify-content: center;
+    }
+  
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content-card {
+      padding: 15px;
+    }
+  
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
