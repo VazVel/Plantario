@@ -1,12 +1,12 @@
 import "../styles/inicioSesion.css";
-import mundo from "../../public/img/fondo.png";
+
 
 
 const inicioSesion = () => {
   return (
     <div className="login-container"
         style={{
-          backgroundImage: `url(${mundo})`,
+          backgroundImage: `url(/img/mundo.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
