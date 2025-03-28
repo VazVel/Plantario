@@ -1,5 +1,5 @@
-import "../styles/inicioSesion.css";
-import mundo from "../img/mundo.png";
+import "../pages/styles/inicioSesion.css";
+import mundo from "../pages/img/mundo.png";
 
 
 const inicioSesion = () => {

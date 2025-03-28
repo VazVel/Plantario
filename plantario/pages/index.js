@@ -1,12 +1,12 @@
-import Inicio from "../pages/Pantallas/Inicio"; // Importa el componente correctamente
-import InicioSesion from "./Pantallas/inicioSesion.jsx";
-import RegistrationForm from "./Pantallas/registro.jsx";
-import RegistroPlanta from "./Pantallas/RegistroPlanta.jsx"
-import Base from "./Pantallas/base.jsx"
-import RegistroDetalles from "./Pantallas/RegistroDetalles.jsx"
+import Inicio from "./Inicio.js"; // Importa el componente correctamente
+import InicioSesion from "./inicioSesion.js";
+import RegistrationForm from "./registro.js";
+import RegistroPlanta from "./RegistroPlanta.js"
+import Base from "./base.js"
+import RegistroDetalles from "./RegistroDetalles.js"
 
 export default function Home() {
-  return <RegistroDetalles />; 
+  return <RegistroPlanta />; 
 
 }
 

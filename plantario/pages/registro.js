@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import "../styles/registro.css"
+import "../pages/styles/RegistroPlanta.css"
 
 const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
   const [formData, setState] = useState({

@@ -1,4 +1,4 @@
-import "../styles/base.css"
+import "../pages/styles/base.css"
 
 // Rutas de las imagenes
 const IMAGES = {

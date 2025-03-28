@@ -1,4 +1,4 @@
-import '../styles/Inicio.css';
+import '../pages/styles/Inicio.css';
 
 const Inicio = () => {
 
