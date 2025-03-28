@@ -4,7 +4,7 @@ import InicioSesion from "./Pantallas/inicioSesion.jsx";
 import Inicio from "./Pantallas/Inicio.jsx";
 import RegistrationForm from "./Pantallas/registro.jsx";
 import RegistroPlanta from "./Pantallas/RegistroPlanta.jsx"
-
+import Base from "./Pantallas/base.jsx"
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/iniciosesion" element={<InicioSesion />} />
         <Route path="/registro" element={<RegistrationForm />} />
         <Route path="/registroplanta" element={<RegistroPlanta />} />
+        <Route path="/base" element={<Base />} />
       </Routes>
     </Router>
   );

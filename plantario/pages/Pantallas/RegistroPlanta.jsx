@@ -9,6 +9,7 @@ const RegistroPlanta = () => {
 
        <div className='container'>
           <div className='Complicated'>
+             <div className="imagenRegistrar"></div>
              <h2>Registra tu planta y haz crecer tu jardin.</h2>
              <p className='Nombre'>Nombre:</p>
              <input className='NombreP' type="nombre" placeholder='Nombre de la Planta' required autoFocus/>
@@ -17,6 +18,7 @@ const RegistroPlanta = () => {
              <p className='Detalles'>¿Añadir más detalles?</p>
              <a href="Leccion.html"><button class="boton1" >Si</button></a> 
              <a href="Leccion.html"><button class="boton2" >No</button></a> 
+             <a href="Leccion.html"><button class="boton3" >Añadir planta</button></a> 
           </div>
         </div> 
      </div>

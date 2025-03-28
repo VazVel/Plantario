@@ -47,11 +47,22 @@ h3{
     flex: 1;
 }
 
-/* h2{
+h2{
     font-family: 'Open Sans', sans-serif;
-    font-size: 55%;
+    font-size: 125%;
     text-align: center;
-    color: #482fe9;
-    margin-top: -3%;
-    margin-left: -82%;
-} */
+    color: #00bf63;
+    margin-left: 50%;
+    margin-top: 2%;
+} 
+
+.imagenRegistrar{
+    background-image: url("../img/RegistraPlanta.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 30vw;
+    height: 75vh;
+    display: flex;  
+}
