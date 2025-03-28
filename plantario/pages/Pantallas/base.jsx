@@ -1,0 +1,67 @@
+import "../styles/base.css"
+
+// Rutas de las imagenes
+const IMAGES = {
+  mainIllustration: "../img/principal.png",
+  calendarIcon: "../img/calendario.png",
+  manageIcon: "../img/gestion.png",
+  wateringIcon: "../img/regar.png",
+  fertilizeIcon: "../img/fertilizar.png",
+}
+
+const Plantario = () => {
+  return (
+    <div className="plantario-container">
+      <header className="plantario-header">
+        <h1 className="plantario-title">PLANTARIO</h1>
+        <div className="header-icons">
+          <button className="icon-button notification">
+            <img src="../img/notificacion.png" alt="Notificaciones" />
+          </button>
+          <button className="icon-button menu">
+            <img src="../img/menu.png" alt="Menú" />
+          </button>
+        </div>
+      </header>
+
+      <main className="plantario-content">
+        <div className="content-card">
+          <div className="hero-section">
+            <div className="hero-text">
+              <h2 className="hero-title">Cuida tus plantas, como ellas cuidan de ti.</h2>
+              <p className="hero-subtitle">Registra una nueva planta:</p>
+              <button className="new-plant-button">Nueva Planta</button>
+            </div>
+            <div className="hero-image">
+              <img src={IMAGES.mainIllustration || "/placeholder.svg"} alt="Cuidado de plantas" />
+            </div>
+          </div>
+
+          <h3 className="tools-title">Herramientas de cuidado</h3>
+
+          <div className="tools-grid">
+            <div className="tool-card">
+              <img src={IMAGES.calendarIcon || "/placeholder.svg"} alt="Calendario" className="tool-icon" />
+              <p className="tool-name">Calendario de Tareas</p>
+            </div>
+            <div className="tool-card">
+              <img src={IMAGES.manageIcon || "/placeholder.svg"} alt="Gestionar" className="tool-icon" />
+              <p className="tool-name">Gestionar plantas</p>
+            </div>
+            <div className="tool-card">
+              <img src={IMAGES.wateringIcon || "/placeholder.svg"} alt="Riego" className="tool-icon" />
+              <p className="tool-name">Riego</p>
+            </div>
+            <div className="tool-card">
+              <img src={IMAGES.fertilizeIcon || "/placeholder.svg"} alt="Fertilizado" className="tool-icon" />
+              <p className="tool-name">Fertilizado</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default Plantario
+
