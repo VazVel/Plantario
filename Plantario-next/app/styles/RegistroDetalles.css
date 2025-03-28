@@ -21,7 +21,7 @@ h3{
     text-align: center;
     color: white;
     position: absolute;
-    top: 3.5%;
+    top: -1.5%;
     left: 42%;
     font-weight: normal;
 }
@@ -56,15 +56,15 @@ h2{
     margin-top: -39%;
 } 
 
-.imagenRegistrar{
-    background-image: url("../../public/img/RegistroDetalles.png");
+.imagenRegistrar {
+    background-image: url("/img/RegistroDetalles.png"); /* Ruta relativa desde 'public' */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     width: 42.5vw;
     height: 75vh;
-    display: flex;  
+    display: flex;
 }
 
 .Fertilizante{

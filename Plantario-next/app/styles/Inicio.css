@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 
 .Fondo {
-  background-image: url("../../public/img/fondo.png");
+  background-image: url("/img/Fondo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
