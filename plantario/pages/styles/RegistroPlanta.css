@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.Fondo {
+  background: radial-gradient(circle at 0% 0%, #a1e9d7, #bcf0d6, #dbf7dc, #f3fde3);
+}
+
+h1 {
+    font-family: 'Bobby Jones', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    background-color: #00bf63;
+    padding: 3%;
+    margin-top: -42.5%; 
+    width: 100%;
+}
+
+h3{
+    font-family: 'Bobby Jones', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 3.5%;
+    left: 42%;
+    font-weight: normal;
+}
+
+/* Aquí lo del contenedor para Agregar una nueva herramienta */
+.container {
+    position: absolute;
+    top: 17%;
+    left: 5.5%;
+}
+
+.container > div {
+    background-color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -10%;
+    width: 900px;  
+    height: 370px; 
+    border: none;
+}
+
+.Complicated {
+    flex: 1;
+}
+
+/* h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 55%;
+    text-align: center;
+    color: #482fe9;
+    margin-top: -3%;
+    margin-left: -82%;
+} */
