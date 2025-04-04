@@ -1,19 +1,19 @@
 import { Pool } from 'pg';
 
-// Configuración de la base de datos
 const pool = new Pool({
-  connectionString: "postgres://neondb_owner:npg_TjlbCXo7Q5FU@ep-morning-feather-a5zoezbz-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require", // Usa variables de entorno
+  connectionString: process.env.DATABASE_URL, // Asegúrate de usar variables de entorno
 });
 
 /**
  * Ejecuta una consulta en la base de datos.
  * @param {string} consultaSQL - La sentencia SQL a ejecutar.
+ * @param {Array} valores - Los valores a insertar en la consulta.
  * @returns {Promise<Array>} - Devuelve las filas obtenidas de la consulta.
  */
-export async function ejecutarConsulta(consultaSQL) {
+export async function ejecutarConsulta(consultaSQL, valores = []) {
   const client = await pool.connect();
   try {
-    const result = await client.query(consultaSQL);
+    const result = await client.query(consultaSQL, valores);
     return result.rows;
   } catch (error) {
     console.error('Error al ejecutar consulta:', error);

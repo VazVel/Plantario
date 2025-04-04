@@ -1,30 +1,60 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import "../styles/registro.css"
+import { useState } from "react";
+import "../styles/registro.css";
 
 const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
-  const [formData, setState] = useState({
+  const [formData, setFormData] = useState({
     nombre: "",
-    apellido: "",
+    apellido1: "",
+    apellido2: "",
     apodo: "",
     correo: "",
-    contrasena: "",
-    confirmarContrasena: "",
-  })
+    password: "",
+    confirmarpassword: "",
+  });
+
+  //const router = useRouter(); // Usamos useRouter para la navegación
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setState((prevState) => ({
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Datos del formulario:", formData)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Verifica que las contraseñas coincidan antes de enviar
+    if (formData.password !== formData.confirmarpassword) {
+      alert("Las contraseñas no coinciden");
+      return;
+    }
+
+    // Elimina confirmarpassword antes de enviar los datos
+    const { confirmarpassword, ...dataToSend } = formData;
+
+    try {
+      const response = await fetch("/api/registro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Registro exitoso");
+        console.log("Usuario registrado:", data);
+      } else {
+        alert("Error en el registro: " + data.error);
+      }
+    } catch (error) {
+      console.error("Error al registrar usuario:", error);
+    }
+  };
 
   return (
     <div className="contenedor-principal" style={{ backgroundImage: `url(${imagenFondo})` }}>
@@ -41,15 +71,13 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
           </div>
 
           <div className="campo-formulario">
-            <label htmlFor="apellido">Apellido</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              value={formData.apellido}
-              onChange={handleChange}
-              required
-            />
+            <label htmlFor="apellido1">Primer apellido</label>
+            <input type="text" id="apellido1" name="apellido1" value={formData.apellido1} onChange={handleChange} required />
+          </div>
+
+          <div className="campo-formulario">
+            <label htmlFor="apellido2">Segundo apellido</label>
+            <input type="text" id="apellido2" name="apellido2" value={formData.apellido2} onChange={handleChange} required />
           </div>
 
           <div className="campo-formulario">
@@ -63,27 +91,13 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
           </div>
 
           <div className="campo-formulario">
-            <label htmlFor="contrasena">Contraseña</label>
-            <input
-              type="password"
-              id="contrasena"
-              name="contrasena"
-              value={formData.contrasena}
-              onChange={handleChange}
-              required
-            />
+            <label htmlFor="password">Contraseña</label>
+            <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
           </div>
 
           <div className="campo-formulario">
-            <label htmlFor="confirmarContrasena">Confirme su contraseña</label>
-            <input
-              type="password"
-              id="confirmarContrasena"
-              name="confirmarContrasena"
-              value={formData.confirmarContrasena}
-              onChange={handleChange}
-              required
-            />
+            <label htmlFor="confirmarpassword">Confirme su contraseña</label>
+            <input type="password" id="confirmarpassword" name="confirmarpassword" value={formData.confirmarpassword} onChange={handleChange} required />
           </div>
 
           <button type="submit" className="boton-comenzar">
@@ -92,8 +106,7 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default RegistroForm
-
+export default RegistroForm;

@@ -45,4 +45,3 @@ const inicioSesion = () => {
 }
 
 export default inicioSesion
-
