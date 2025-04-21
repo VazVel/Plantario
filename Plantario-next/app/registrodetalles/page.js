@@ -1,8 +1,11 @@
-"use client"
+"use client";
+
+import { useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from "react";
 import '../styles/RegistroDetalles.css'
 
 const RegistroPlanta = () => {
+  const router = useRouter();
 
   //Esto es para que cuando el usuario le de enter en un input de un salto al siguiente input
   const inputsRef = useRef([]);
@@ -67,15 +70,15 @@ const RegistroPlanta = () => {
           />
 
 
-          <a href="Inicio.jsx">
+          
             <button className="boton" onMouseOver={() => handleMouseOver(3)} onMouseOut={handleMouseOut}
+              onClick={() => router.push('/inventario')}
               style={{ backgroundColor: botonActivo === 3 ? "#00bf63" : "#7ed957",
                        color: "#21522d"
               }}
             >
               Añadir planta
             </button>
-          </a>
           
         </div>
       </div> 

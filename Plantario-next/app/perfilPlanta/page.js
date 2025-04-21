@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from 'next/navigation';
 import "../styles/perfilPlanta.css"
 
 const PerfilPlanta = () => {
+  const router = useRouter();
   const imagenes = {
     logo: "../img/plantalogo.png",
     notificacion: "../img/notificacion.png",
@@ -50,7 +52,7 @@ const PerfilPlanta = () => {
       <header className="plantario-header">
         <h1 className="plantario-title">PLANTARIO</h1>
         <div className="plantario-icons">
-          <button className="icon-button">
+          <button className="icon-button" onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion || "/placeholder.svg"} alt="Notificaciones" className="icon" />
           </button>
           <button className="icon-button">
