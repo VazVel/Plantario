@@ -50,7 +50,7 @@ const PerfilPlanta = () => {
   return (
     <div className="plantario-container">
       <header className="plantario-header">
-        <h1 className="plantario-title">PLANTARIO</h1>
+        <h1 className="plantario-title" onClick={() => router.push('/base')}>PLANTARIO</h1>
         <div className="plantario-icons">
           <button className="icon-button" onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion || "/placeholder.svg"} alt="Notificaciones" className="icon" />

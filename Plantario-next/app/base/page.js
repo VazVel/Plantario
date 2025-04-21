@@ -18,12 +18,12 @@ const Plantario = () => {
   return (
     <div className="plantario-container">
       <header className="plantario-header">
-        <h1 className="plantario-title">PLANTARIO</h1>
+        <h1 className="plantario-title" onClick={() => router.push('/base')}>PLANTARIO</h1>
         <div className="header-icons">
           <button className="icon-button notification" onClick={() => router.push('/riego')}>
             <img src="../img/notificacion.png" alt="Notificaciones" />
           </button>
-          <button className="icon-button menu">
+          <button className="icon-button menu" onClick={() => router.push('/inventario')}>
             <img src="../img/menu.png" alt="Menú" />
           </button>
         </div>

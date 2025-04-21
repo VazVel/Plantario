@@ -1,9 +1,13 @@
 "use client";
+
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from "react";
 import "../styles/riego.css"; 
 import "../styles/fertilizacion.css";
 
 const riego = () => {
+  const router = useRouter();
+  
   /* Este metodo es para que ponga la fecha actual */
   const [fechaActual, setFechaActual] = useState("");
   const [activeTab, setActiveTab] = useState("riego");
@@ -20,7 +24,7 @@ const riego = () => {
   return (
     <div className="Fondo">
       <h1></h1>
-      <h3>PLANTARIO</h3>
+      <h3 onClick={() => router.push('/base')}>PLANTARIO</h3>
 
       <div className="container">
         <div className="Complicated">

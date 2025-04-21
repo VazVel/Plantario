@@ -42,7 +42,7 @@ const RegistroPlanta = () => {
   return (
     <div className='Fondo'>
       <h1></h1>
-      <h3>PLANTARIO</h3>
+      <h3 onClick={() => router.push('/base')}>PLANTARIO</h3>
 
       <div className='container'>
         <div className='Complicated'>
