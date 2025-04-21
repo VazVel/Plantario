@@ -6,7 +6,10 @@ import '../../app/styles/Inicio.css';
 const Inicio = () => {
   const router = useRouter();
   return (
+    
     <div className='Fondo'>
+      <link rel="icon" href="/img/logoinventario.png" />
+
       <h2 className='plantario'>PLANTARIO</h2>
       <button className='botonRegistrarse' onClick={() => router.push('/registro')} >
          Registrarse
@@ -15,7 +18,10 @@ const Inicio = () => {
       <button className='botonCuenta' onClick={() => router.push('/iniciosesion')}>
          Ya tengo cuenta
       </button>
+
     </div>
+
+    
   );
 };
 

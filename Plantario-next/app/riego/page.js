@@ -23,6 +23,7 @@ const riego = () => {
 
   return (
     <div className="Fondo">
+      <link rel="icon" href="/img/logoinventario.png" />
       <h1></h1>
       <h3 onClick={() => router.push('/base')}>PLANTARIO</h3>
 

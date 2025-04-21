@@ -48,7 +48,9 @@ const InicioSesion = () => {
   
 
   return (
+    
     <div
+    
       className="login-container"
       style={{
         backgroundImage: `url(/img/mundo.png)`,
@@ -56,6 +58,11 @@ const InicioSesion = () => {
         backgroundPosition: "center",
       }}
     >
+      
+      <head>
+         <link rel="icon" href="/img/logoinventario.png" />
+      </head>
+
       <div className="content-wrapper">
         <div className="image-container"></div>
 
