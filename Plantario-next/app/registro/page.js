@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import "../styles/registro.css";
+import { useRouter } from "next/navigation";
+
 
 const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
   const [formData, setFormData] = useState({
@@ -13,8 +15,7 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
     password: "",
     confirmarpassword: "",
   });
-
-  //const router = useRouter(); // Usamos useRouter para la navegación
+  const router = useRouter(); // Usamos useRouter para la navegación
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +48,7 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
 
       if (response.ok) {
         alert("Registro exitoso");
+        router.push("/iniciosesion");
         console.log("Usuario registrado:", data);
       } else {
         alert("Error en el registro: " + data.error);
