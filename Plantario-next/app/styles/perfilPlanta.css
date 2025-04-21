@@ -1,0 +1,191 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+  }
+  
+  /* Contenedor principal */
+  .plantario-container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado */
+  .plantario-header {
+    background-color: #00c853;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plantario-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .plantario-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Hace que los iconos sean blancos */
+  }
+  
+  /* Contenido principal */
+  .plantario-content {
+    background-color: #c8f7d9;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Tarjeta de perfil */
+  .perfil-card {
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título del perfil */
+  .perfil-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .planta-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .perfil-heading {
+    color: #00c853;
+    font-size: 22px;
+  }
+  
+  /* Encabezado de datos */
+  .datos-header {
+    background-color: #00c853;
+    color: white;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .datos-header h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  /* Formulario */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .descripcion-group {
+    height: 100%;
+  }
+  
+  .descripcion-group textarea {
+    flex-grow: 1;
+    resize: none;
+  }
+  
+  /* Botones */
+  .botones-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .btn-actualizar,
+  .btn-eliminar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px dashed;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 180px;
+  }
+  
+  .btn-actualizar {
+    background-color: #e8f5e9;
+    border-color: #00c853;
+    color: #00c853;
+  }
+  
+  .btn-eliminar {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #f44336;
+  }
+  
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+  

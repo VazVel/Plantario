@@ -1,0 +1,137 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+  }
+  
+  /* Contenedor principal */
+  .plantario-container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado */
+  .plantario-header {
+    background-color: #00c853;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plantario-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .plantario-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Hace que los iconos sean blancos */
+  }
+  
+  /* Contenido principal */
+  .plantario-content {
+    background-color: #c8f7d9;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Título de gestión */
+  .gestion-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gestion-title h2 {
+    color: #4a8c3f;
+    font-size: 22px;
+  }
+  
+  .logo-small {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Botón de inventario */
+  .inventario-button {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  /* Lista de plantas */
+  .plantas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .planta-item {
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .planta-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .planta-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .planta-nombre {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .config-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .config-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
