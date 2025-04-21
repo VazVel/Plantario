@@ -80,35 +80,29 @@ h3{
 
 
 
-.boton1{
-    font-size: 13px;
-    font-family: 'Bobby Jones', sans-serif;
-    color: black;
-    background-color: #00bf63;
-    text-align: center;
-    border: none;
-    padding: 4px;
-    width: 15%;
-    margin-left: 9%;
+
+.tabs {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 15%;
-}
-
-.boton2{
+    margin-left: 9%;
+  }
+  
+  .tabbutton {
     font-size: 13px;
     font-family: 'Bobby Jones', sans-serif;
+    padding: 5px 45px;
+    cursor: pointer;
     color: black;
     background-color: #d9d9d9;
-    text-align: center;
     border: none;
-    padding: 4px;
-    width: 15%;
-    margin-left: 24%;
-    position: absolute;
-    top: 15%;
-}
-
-
+  }
+  
+  .tabbutton.active {
+    background-color: #00bf63; /* verde claro o como tú gustes */
+  }
+  
 
 
 /* Diseño de los cuadros de las plantas que faltan por regar */
@@ -182,3 +176,4 @@ h3{
   border: 2px dashed #225d22; /* Borde punteado */
 
 }
+
