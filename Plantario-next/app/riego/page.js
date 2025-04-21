@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import "../styles/riego.css"; // Puedes importar ambos estilos si son distintos
+import "../styles/riego.css"; 
 import "../styles/fertilizacion.css";
 
-const PlantarioTabs = () => {
+const riego = () => {
+  /* Este metodo es para que ponga la fecha actual */
   const [fechaActual, setFechaActual] = useState("");
   const [activeTab, setActiveTab] = useState("riego");
 
@@ -44,7 +45,7 @@ const PlantarioTabs = () => {
             </button>
           </div>
 
-          {/* Contenido de la pestaña seleccionada */}
+          {/* Contenido de cuando se selecciona uno de los dos botones seleccionada */}
           {activeTab === "riego" && (
             <div className="cuadro">
               <div className="Cubo">
@@ -61,7 +62,7 @@ const PlantarioTabs = () => {
               <div className="Cubo">
                 <div className="planta"></div>
                 <p className="nombreplanta">Nombre de la planta</p>
-                <p className="pregunta">
+                <p className="pregunta2">
                   Es hora de alimentar a tu planta, <br /> ¿ya la fertilizaste?
                 </p>
                 <button className="boton3">Listo</button>
@@ -74,4 +75,4 @@ const PlantarioTabs = () => {
   );
 };
 
-export default PlantarioTabs;
+export default riego;

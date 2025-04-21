@@ -28,7 +28,6 @@ h3{
     font-weight: normal;
 }
 
-/* Contenedor del cuadro blanco */
 .container {
     position: absolute;
     top: 17%;
@@ -81,28 +80,6 @@ h3{
 
 
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 15%;
-    margin-left: 9%;
-  }
-  
-  .tabbutton {
-    font-size: 13px;
-    font-family: 'Bobby Jones', sans-serif;
-    padding: 5px 45px;
-    cursor: pointer;
-    color: black;
-    background-color: #d9d9d9;
-    border: none;
-  }
-  
-  .tabbutton.active {
-    background-color: #00bf63; 
-  }
-  
 
 
 /* Diseño de los cuadros de las plantas que faltan por regar */
@@ -147,14 +124,14 @@ h3{
     top: 15%;
 }
 
-.pregunta{
+.pregunta2{
     font-size: 11px;
     font-family: 'Bobby Jones', sans-serif;
     color: #545454;
     text-align: center;
+    margin-left: 72%;
     position: absolute;
-    top: 20%;
-    margin-left: 75%;
+    top: 5%;
 }
 
 .boton3{
@@ -174,4 +151,5 @@ h3{
   top: 35%;
   margin-left: 75%;
   border: 2px dashed #225d22; /* Borde punteado */
+
 }
