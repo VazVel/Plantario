@@ -12,6 +12,8 @@ export default function Home() {
           <li><Link href="/registrodetalles">Registro Detalles</Link></li>
           <li><Link href="/registroplanta">Registro Planta</Link></li>
           <li><Link href="/base">Base</Link></li>
+          <li><Link href="/riego">Riego</Link></li> 
+          <li><Link href="/fertilizacion">Fertilización</Link></li> 
         </ul>
       </nav>
     </div>
