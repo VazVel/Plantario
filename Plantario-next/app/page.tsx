@@ -7,7 +7,7 @@ import Registrodetalles from "./registrodetalles/page";
 import Registroplantas from "./registroplanta/page"; 
 import Base from "./base/page";
 import Riego from "./riego/page";
-import Fertilizacion from "./fertilizacion/page";
+
 
 export default function Home() {
   return (
