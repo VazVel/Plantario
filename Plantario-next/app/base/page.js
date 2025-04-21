@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import "../styles/base.css"
 
 // Rutas de las imagenes
@@ -10,6 +14,7 @@ const IMAGES = {
 }
 
 const Plantario = () => {
+  const router = useRouter();
   return (
     <div className="plantario-container">
       <header className="plantario-header">
@@ -30,7 +35,9 @@ const Plantario = () => {
             <div className="hero-text">
               <h2 className="hero-title">Cuida tus plantas, como ellas cuidan de ti.</h2>
               <p className="hero-subtitle">Registra una nueva planta:</p>
-              <button className="new-plant-button">Nueva Planta</button>
+              <button className="new-plant-button" onClick={() => router.push('/registroplanta')}>
+                 Nueva Planta
+              </button>
             </div>
             <div className="hero-image">
               <img src={IMAGES.mainIllustration || "/placeholder.svg"} alt="Cuidado de plantas" />
@@ -40,19 +47,19 @@ const Plantario = () => {
           <h3 className="tools-title">Herramientas de cuidado</h3>
 
           <div className="tools-grid">
-            <div className="tool-card">
+            <div className="tool-card" onClick={() => router.push('/riego')}>
               <img src={IMAGES.calendarIcon || "/placeholder.svg"} alt="Calendario" className="tool-icon" />
               <p className="tool-name">Calendario de Tareas</p>
             </div>
-            <div className="tool-card">
+            <div className="tool-card" onClick={() => router.push('/inventario')}>
               <img src={IMAGES.manageIcon || "/placeholder.svg"} alt="Gestionar" className="tool-icon" />
               <p className="tool-name">Gestionar plantas</p>
             </div>
-            <div className="tool-card">
+            <div className="tool-card" onClick={() => router.push('/riego')}>
               <img src={IMAGES.wateringIcon || "/placeholder.svg"} alt="Riego" className="tool-icon" />
               <p className="tool-name">Riego</p>
             </div>
-            <div className="tool-card">
+            <div className="tool-card" onClick={() => router.push('/riego')}>
               <img src={IMAGES.fertilizeIcon || "/placeholder.svg"} alt="Fertilizado" className="tool-icon" />
               <p className="tool-name">Fertilizado</p>
             </div>

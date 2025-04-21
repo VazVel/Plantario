@@ -1,8 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import "../styles/registro.css";
-import { useRouter } from "next/navigation";
 
 
 const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
@@ -102,9 +102,10 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
             <input type="password" id="confirmarpassword" name="confirmarpassword" value={formData.confirmarpassword} onChange={handleChange} required />
           </div>
 
-          <button type="submit" className="boton-comenzar">
-            Comenzar
+          <button type="submit" className="boton-comenzar" onClick={() => router.push('/base')}>
+             Comenzar
           </button>
+
         </form>
       </div>
     </div>

@@ -93,7 +93,9 @@ const InicioSesion = () => {
 
             {error && <p className="error-message">{error}</p>}
 
-            <button type="submit" className="start-button">Comenzar</button>
+            <button type="submit" className="start-button"  onClick={() => router.push('/base')}>
+               Comenzar
+            </button>
           </form>
         </div>
       </div>
