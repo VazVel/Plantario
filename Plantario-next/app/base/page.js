@@ -11,6 +11,7 @@ const IMAGES = {
   manageIcon: "../img/gestion.png",
   wateringIcon: "../img/regar.png",
   fertilizeIcon: "../img/fertilizar.png",
+  principal: "../img/chicap.png",
 }
 
 const Plantario = () => {
@@ -41,7 +42,7 @@ const Plantario = () => {
               </button>
             </div>
             <div className="hero-image">
-              <img src={IMAGES.mainIllustration || "/placeholder.svg"} alt="Cuidado de plantas" />
+              <img src={IMAGES.principal || "/placeholder.svg"} alt="Cuidado de plantas" />
             </div>
           </div>
 

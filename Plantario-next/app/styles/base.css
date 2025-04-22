@@ -40,7 +40,8 @@
   .plantario-title {
     font-size: 28px;
     font-weight: bold;
-    letter-spacing: 1px;
+    text-align: center;
+    flex-grow: 1;
   }
   
   .header-icons {

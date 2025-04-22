@@ -1,101 +1,68 @@
-"use client"
+"use client";
+
 import { useRouter } from 'next/navigation';
-import { useState, useEffect, useRef } from "react";
-import '../styles/RegistroPlanta.css'
+import { useState, useEffect } from "react";
+import "../styles/registroplanta.css";
 
-const RegistroPlanta = () => {
-  const router = useRouter();
-  //Esto es para que cuando el usuario le de enter en un input de un salto al siguiente input
-  const inputsRef = useRef([]);
-  
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        let index = inputsRef.current.indexOf(document.activeElement);
-        if (index > -1 && index < inputsRef.current.length - 1) {
-          inputsRef.current[index + 1].focus();
-        }
-      }
-    };
+const registrop = () => {
+    const router = useRouter();
 
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+   const imagenes = {
+      planta: "../img/registroplanta.png",
+      logo: "../img/hoja.png"
+   };
 
+   return (
+       <div className='plantario-container'>
+          <header className='plantario-header'>
+             <h1 className='plantario-title' onClick={() => router.push('/base')}>PLANTARIO</h1>
+          </header>
 
+          <main className='plantario-content'>
+            <div className='perfil-card'> 
+               <div className='perfil-titulo'>
+                  <img src={imagenes.logo || "/placeholder.svg"} alt='Planta' className='planta-logo'></img>
+                  <h2 className='perfil-heading'>Registra tu planta y haz crecer tu jardín.</h2>
+                  <img src={imagenes.planta || "/placeholder.svg"} alt='Planta2' className='planta-fondo'></img>
+               </div>
 
-  // Esto es para que cambie el color de los botones cuando se pase el mouse
-  const [botonActivo, setBotonActivo] = useState(null);
+              <div className='form-grid'>
+                <div className='form-column'>
+                  <div className='form-group'>
+                     <label htmlFor='nombre'>Nombre:</label>
+                     <input type='text' id='nombre' name='nombre'></input>
+                  </div>
 
-  // Función para cambiar el estilo al pasar el cursor
-  const handleMouseOver = (index) => {
-    setBotonActivo(index);
-  };
+                  <div className='form-group'>
+                    <label htmlFor='diasRegado'>Dias de regado:</label> 
+                     <input type='text'id='diasRegado'name='diasRegado'></input>
+                  </div>
 
-  // Función para restaurar el color original
-  const handleMouseOut = () => {
-    setBotonActivo(null);
-  };
+                  <div className='form-group'>
+                    <label htmlFor='diasFertilizante'>¿Cada cuantos dias le pones fertilizante a tu planta?</label> 
+                     <input type='text'id='diasFertilizante'name='diasFertilizante'></input>
+                  </div>
 
+                  <div className='form-group'>
+                    <label htmlFor='diasPodar'>¿Cada cuanto días la sueles podar?</label> 
+                     <input type='text'id='diasPodar'name='diasPodar'></input>
+                  </div>
 
-  return (
-    <div className='Fondo'>
-      <link rel="icon" href="/img/logoinventario.png" />
-      <h1></h1>
-      <h3 onClick={() => router.push('/base')}>PLANTARIO</h3>
+                  <div className='botones-container'>
+                     <button type='submit' className='btn-guardar'>
+                        <img src={imagenes.logo || "/placeholder.svg"} alt='Hoja' className='btn-icon'></img>
+                        Guardar
+                     </button>
+                  </div>
+                </div>
+               </div> 
 
-      <div className='container'>
-        <div className='Complicated'>
-          <div className="imagenRegistrar"></div>
-          <h2>Registra tu planta y haz crecer tu jardín.</h2>
-          
-          <p className='Nombre'>Nombre:</p>
-          <input className='NombreP' type="text" placeholder='Nombre de la Planta'  required autoFocus
-            ref={(el) => (inputsRef.current[0] = el)}
-          />
-
-          <p className='Dias'>Días que se riega:</p>
-          <input className='DiasP'  type="number" placeholder='Cada día o cada 2 días' required
-            ref={(el) => (inputsRef.current[1] = el)}
-          />
-
-          <p className='Detalles'>¿Añadir más detalles?</p>
-
-          {/* Botones con efectos de hover */}
-          
-            <button className="boton1" onMouseOver={() => handleMouseOver(1)}onMouseOut={handleMouseOut}
-              onClick={() => router.push('/registrodetalles')}
-              style={{backgroundColor: botonActivo === 1 ? "#00bf63" : "#7d8078",
-                      color: "black"  
-              }}
-            >
-              Sí
-            </button>
-          
-
-            <button className="boton2"  onMouseOver={() => handleMouseOver(2)}onMouseOut={handleMouseOut}
-              style={{backgroundColor: botonActivo === 2 ? "#00bf63" : "#7d8078",
-                     color: "black"
-              }}
-            >
-              No
-            </button>
+            </div>
+          </main>
+      </div>
 
 
-            <button className="boton3"  onMouseOver={() => handleMouseOver(3)} onMouseOut={handleMouseOut}
-              onClick={() => router.push('/inventario')}
-              style={{ backgroundColor: botonActivo === 3 ? "#00bf63" : "#7ed957",
-                       color: "#21522d"
-              }}
-            >
-              Añadir planta
-            </button>
-          
-        </div>
-      </div> 
-    </div>
-  );
-};
+  )
+}
 
-export default RegistroPlanta;
+export default registrop
