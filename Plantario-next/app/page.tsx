@@ -9,6 +9,7 @@ import Base from "./base/page";
 import Riego from "./riego/page";
 import Inventario from "./inventario/page";
 import PerfilPlanta from "./perfilPlanta/page";
+import Ferti from "./ferti/page";
 
 
 export default function Home() {

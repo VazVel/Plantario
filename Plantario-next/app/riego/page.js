@@ -2,82 +2,88 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from "react";
-import "../styles/riego.css"; 
-import "../styles/fertilizacion.css";
+import "../styles/riego.css";
 
-const riego = () => {
+const Riego = () => {
   const router = useRouter();
-  
-  /* Este metodo es para que ponga la fecha actual */
-  const [fechaActual, setFechaActual] = useState("");
+
+  const imagenes = {
+    icono: "../img/plantal.png",
+    planta: "../img/plantaRF.png",
+    notificacion: "../img/notificacion.png",
+    configuracion: "../img/menu.png",
+  };
+
+  const [plantas, setPlantas] = useState([
+    { id: 1, nombre: "Nombre de la planta" },
+    { id: 2, nombre: "Nombre de la planta" },
+    { id: 3, nombre: "Nombre de la planta" },
+    { id: 4, nombre: "Nombre de la planta" },
+  ]);
+
   const [activeTab, setActiveTab] = useState("riego");
 
-  useEffect(() => {
-    const hoy = new Date();
-    const dia = String(hoy.getDate()).padStart(2, "0");
-    const mes = String(hoy.getMonth() + 1).padStart(2, "0");
-    const año = hoy.getFullYear();
-    const fechaFormateada = `${dia}/${mes}/${año}.`;
-    setFechaActual(fechaFormateada);
-  }, []);
-
   return (
-    <div className="Fondo">
-      <link rel="icon" href="/img/logoinventario.png" />
-      <h1></h1>
-      <h3 onClick={() => router.push('/base')}>PLANTARIO</h3>
-
-      <div className="container">
-        <div className="Complicated">
-          <div className="imagenRiego"></div>
-          <h2>Calendario de Tareas</h2>
-
-          <p className="fecha">{fechaActual}</p>
-
-          {/* Tabs */}
-          <div className="tabs">
-            <button
-              className={`tabbutton ${activeTab === "riego" ? "active" : ""}`}
-              onClick={() => setActiveTab("riego")}
-            >
-              Riego
-            </button>
-            <button
-              className={`tabbutton ${activeTab === "fertilizacion" ? "active" : ""}`}
-              onClick={() => setActiveTab("fertilizacion")}
-            >
-              Fertilización
-            </button>
-          </div>
-
-          {/* Contenido de cuando se selecciona uno de los dos botones seleccionada */}
-          {activeTab === "riego" && (
-            <div className="cuadro">
-              <div className="Cubo">
-                <div className="planta"></div>
-                <p className="nombreplanta">Nombre de la planta</p>
-                <p className="pregunta">¿Ya regaste la planta?</p>
-                <button className="boton3">Listo</button>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "fertilizacion" && (
-            <div className="cuadro">
-              <div className="Cubo">
-                <div className="planta"></div>
-                <p className="nombreplanta">Nombre de la planta</p>
-                <p className="pregunta2">
-                  Es hora de alimentar a tu planta, <br /> ¿ya la fertilizaste?
-                </p>
-                <button className="boton3">Listo</button>
-              </div>
-            </div>
-          )}
+    <div className='plantario-container'>
+      <header className='plantario-header'>
+        <h1 className='plantario-title' onClick={() => router.push('/base')}>PLANTARIO</h1>
+        <div className='plantario-icons'>
+          <button className='icon-button' onClick={() => router.push('/riego')}>
+            <img src={imagenes.notificacion} alt='Notificaciones' className='icon' />
+          </button>
+          <button className="icon-button" onClick={() => router.push('/base')}>
+            <img src={imagenes.configuracion} alt="Menú" className="icon" />
+          </button>
         </div>
-      </div>
+      </header>
+
+      <main className='plantario-content'>
+        <div className='gestion-title'>
+          <img src={imagenes.icono} alt='Logo' className='logo-small' />
+          <h2>Calendario de Tareas</h2>
+        </div>
+
+        {/* Tabs */}
+        <div className="tabs">
+          <button
+            className={`tabbutton ${activeTab === "riego" ? "active" : ""}`}
+            onClick={() => setActiveTab("riego")}
+          >
+            Riego
+          </button>
+          <button
+            className={`tabbutton ${activeTab === "fertilizacion" ? "active" : ""}`}
+            onClick={() => setActiveTab("fertilizacion")}
+          >
+            Fertilización
+          </button>
+        </div>
+
+       <br></br> 
+
+        {/* Lista de plantas con contenido por tab */}
+        <div className='plantas-list'>
+          {plantas.map((planta) => (
+            <div key={planta.id} className='planta-item'>
+              <div className='planta-info'>
+                <img src={imagenes.planta} alt='Planta' className='planta-icon' />
+                <span className='planta-nombre'>{planta.nombre}</span>
+              </div>
+              <p className="pregunta">
+                {activeTab === "riego"
+                  ? "¿Ya regaste la planta?"
+                  : "Es hora de alimentar a tu planta, ¿ya la fertilizaste?"}
+              </p>
+              <button className="boton3">Listo</button>
+              <button className="config-button" onClick={() => router.push('/perfilPlanta')}>
+                <img src={imagenes.configuracion} alt="Configurar" className="config-icon" />
+              </button>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 };
 
-export default riego;
+export default Riego;

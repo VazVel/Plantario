@@ -15,6 +15,7 @@ export default function Home() {
           <li><Link href="/riego">Riego</Link></li> 
           <li><Link href="/inventario">Inventario</Link></li> 
           <li><Link href="/perfilPlanta">PerfilPlanta</Link></li> 
+          <li><Link href="/ferti">Ferti</Link></li> 
 
         </ul>
       </nav>

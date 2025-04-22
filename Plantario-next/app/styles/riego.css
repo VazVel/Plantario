@@ -1,93 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-.Fondo {
-  background-color: #c8f7d9;
-  width: 110.1%;
-  margin-left: -10%;
-}
-
-h1 {
-    font-family: 'Bobby Jones', sans-serif;
-    font-size: 200%;
-    text-align: center;
-    color: white;
-    background-color: #00c853;
-    padding: 3.1%;
-    margin-top: -42.5%; 
-    width: 95%;
-}
-
-h3{
-    font-family: 'Bobby Jones', sans-serif;
-    font-size: 150%;
-    text-align: center;
-    color: white;
-    background-color: #00c853;
-    position: absolute;
-    top: -1.5%;
-    left: 42%;
-    font-weight: normal;
-}
-
-/* Contenedor del cuadro blanco */
-.container {
-    position: absolute;
-    top: 17%;
-    left: 5.5%;
-}
-
-.container > div {
-    background-color: white;
-    font-size: 20px;
-    position: absolute;
-    margin-top: -10%;
-    width: 900px;  
-    height: 420px; 
-    border: none;
-}
-
-.Complicated {
-    flex: 1;
-}
-
-.imagenRiego {
-    background-image: url("/img/Riego.png");
-    background-repeat: no-repeat;
-    background-size: 22% 22%; 
-    width: 20%; 
-    height: 30vh;
-    margin-left: 8%;
-    margin-top: 1%;
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
   
-  h2{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 110%;
+  body {
+    background-color: #f0f0f0;
+  }
+  
+  /* Contenedor principal */
+  .plantario-container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado */
+  .plantario-header {
+    background-color: #00c853;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plantario-title {
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    color: #00bf63;
-    position: absolute;
-    top: 0%;
-    margin-left: 14%;  
-} 
-
-.fecha{
-    font-family: 'Open Sans', sans-serif;
-    color: #43a38a;
-    font-size: 70%;
-    position: absolute;
-    top: 2%;
-    margin-left: 82%;
-}
-
-
-
-
-.tabs {
+    flex-grow: 1;
+  }
+  
+  .plantario-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Contenido principal */
+  .plantario-content {
+    background-color: #c8f7d9;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Título  */
+  .gestion-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gestion-title h2 {
+    color: #4a8c3f;
+    font-size: 22px;
+  }
+  
+  .logo-small {
+    width: 40px;
+    height: 35px;
+  }
+  
+  /* Lista de plantas */
+  .plantas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .planta-item {
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .planta-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .planta-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .planta-nombre {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .config-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .config-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Tabs */
+  .tabs {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 15%;
-    margin-left: 9%;
+    top: 25%;
+    margin-left: 1%;
   }
   
   .tabbutton {
@@ -101,78 +143,40 @@ h3{
   }
   
   .tabbutton.active {
-    background-color: #00bf63; 
+    background-color: #00bf63;
   }
   
-
-
-/* Diseño de los cuadros de las plantas que faltan por regar */
-.cuadro {
-    position: absolute;
-    top: 25%;
-    margin-left: 9%;
-}
-
-.cuadro > div {
-    background-color: white;
-    font-size: 20px;
-    position: absolute;
-    margin-top: -10%;
-    width: 730px;  
-    height: 70px; 
-    border-radius: 15px;
-    border: 2px solid #7d8078;
-}
-
-.Cubo {
-    flex: 1;
-}
-
-.planta {
-    background-image: url("/img/plantaRF.png");
-    background-repeat: no-repeat;
-    background-size: 40% 40%; 
-    width: 19%; 
-    height: 33vh;
-    margin-left: 4%;
-    margin-top: 0%;
-}
-
-.nombreplanta{
-    font-size: 16px;
-    font-family: 'Bobby Jones', sans-serif;
-    color: black;
-    text-align: center;
-    margin-left: 20%;
-    position: absolute;
-    top: 15%;
-}
-
-.pregunta{
-    font-size: 11px;
-    font-family: 'Bobby Jones', sans-serif;
+  /* Pregunta y botón dentro del cuadro blanco */
+  .planta-detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 15px;
+    
+  }
+  
+  .pregunta {
+    font-size: 11.5px;
     color: #545454;
-    text-align: center;
-    position: absolute;
-    top: 20%;
-    margin-left: 75%;
-}
-
-.boton3{
-  display: block;
-  width: 15.5%;
-  margin: 20px auto 10px;
-  padding: 3px;
-  background-color: #7ed957;
-  color: #21522d;
-  border: none;
-  border-radius: 25px;
-  font-size: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  position: absolute;
-  top: 35%;
-  margin-left: 75%;
-  border: 2px dashed #225d22; /* Borde punteado */
-}
+    margin-top: 0%;
+    margin-left: 20%;
+  }
+  
+  .boton3 {
+    background-color: #00bf63;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 2px dashed #225d22; /* Borde punteado */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .boton3:hover {
+    background-color: #00994c;
+  }
+  

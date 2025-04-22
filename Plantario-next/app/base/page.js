@@ -18,6 +18,7 @@ const Plantario = () => {
   return (
     <div className="plantario-container">
       <header className="plantario-header">
+      <link rel="icon" href="/img/logoinventario.png" />
         <h1 className="plantario-title" onClick={() => router.push('/base')}>PLANTARIO</h1>
         <div className="header-icons">
           <button className="icon-button notification" onClick={() => router.push('/riego')}>
