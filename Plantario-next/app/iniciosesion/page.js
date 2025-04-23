@@ -59,10 +59,6 @@ const InicioSesion = () => {
       }}
     >
       
-      <head>
-         <link rel="icon" href="/img/logoinventario.png" />
-      </head>
-
       <div className="content-wrapper">
         <div className="image-container"></div>
 

@@ -25,7 +25,7 @@ const Plantario = () => {
           <button className="icon-button notification" onClick={() => router.push('/riego')}>
             <img src="../img/notificacion.png" alt="Notificaciones" />
           </button>
-          <button className="icon-button menu" onClick={() => router.push('/inventario')}>
+          <button className="icon-button menu" onClick={() => router.push('/inicio')}>
             <img src="../img/menu.png" alt="Menú" />
           </button>
         </div>

@@ -9,7 +9,7 @@ const PerfilPlanta = () => {
   const imagenes = {
     logo: "../img/plantalogo.png",
     notificacion: "../img/notificacion.png",
-    menu: "../img/menuBurger.png",
+    menu: "../img/menu.png",
     hoja: "../img/hoja.png",
     eliminar: "../img/basuraIcon.png",
   }
@@ -55,7 +55,7 @@ const PerfilPlanta = () => {
           <button className="icon-button" onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion || "/placeholder.svg"} alt="Notificaciones" className="icon" />
           </button>
-          <button className="icon-button">
+          <button className="icon-button" onClick={() => router.push('/inicio')}>
             <img src={imagenes.menu || "/placeholder.svg"} alt="Menú" className="icon" />
           </button>
         </div>

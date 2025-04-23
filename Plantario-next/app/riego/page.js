@@ -11,7 +11,8 @@ const Riego = () => {
     icono: "../img/plantal.png",
     planta: "../img/plantaRF.png",
     notificacion: "../img/notificacion.png",
-    configuracion: "../img/menu.png",
+    configuracion: "../img/menu2.png",
+    cerrarsesion: "../img/menu.png",
   };
 
   const [plantas, setPlantas] = useState([
@@ -31,8 +32,8 @@ const Riego = () => {
           <button className='icon-button' onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion} alt='Notificaciones' className='icon' />
           </button>
-          <button className="icon-button" onClick={() => router.push('/base')}>
-            <img src={imagenes.configuracion} alt="Menú" className="icon" />
+          <button className="icon-button" onClick={() => router.push('/inicio')}>
+            <img src={imagenes.cerrarsesion} alt="Menú" className="icon" />
           </button>
         </div>
       </header>
