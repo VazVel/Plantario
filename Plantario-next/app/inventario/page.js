@@ -9,9 +9,10 @@ const Plantario = () => {
   const imagenes = {
     logo: "../img/logoInventario.png",
     icono: "../img/hoja.png",
-    configuracion: "../img/menu.png",
+    configuracion: "../img/menu2.png",
     notificacion: "../img/notificacion.png",
     menu: "../img/menuBurger.png",
+    cerrarsesion: "../img/menu.png",
   }
 
   // Lista de ejemplo de plantas
@@ -31,8 +32,8 @@ const Plantario = () => {
           <button className="icon-button" onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion || "/placeholder.svg"} alt="Notificaciones" className="icon" />
           </button>
-          <button className="icon-button" onClick={() => router.push('/base')}>
-            <img src={imagenes.menu || "/placeholder.svg"} alt="Menú" className="icon" />
+          <button className="icon-button" onClick={() => router.push('/inicio')}>
+            <img src={imagenes.cerrarsesion || "/placeholder.svg"} alt="Menú" className="icon" />
           </button>
         </div>
       </header>
