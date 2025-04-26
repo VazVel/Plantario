@@ -7,12 +7,12 @@ export async function middleware(req) {
 
   // Si no hay sesión, redirigir a la página de inicio
   if (!session?.user) {
-    return NextResponse.redirect(new URL('/inicio', req.url)); // Redirige a /inicio si no hay sesión
+    return NextResponse.redirect(new URL('/', req.url)); // Redirige a /inicio si no hay sesión
   }
 
   return NextResponse.next();  // Si hay sesión, permitir que la solicitud continúe
 }
 
 export const config = {
-  matcher: ['/base', '/inventario', '/registro'],  // Rutas que necesitan estar protegidas
+  matcher: ['/base', '/inventario', '/registro', '/registroplanta'],  // Rutas que necesitan estar protegidas
 };

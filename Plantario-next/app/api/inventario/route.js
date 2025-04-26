@@ -15,7 +15,6 @@ export async function GET(req) {
     const valores = [session.user.id];
 
     const resultado = await ejecutarConsulta(consultaSQL, valores);
-    console.log("Resultado de la base de datos:", resultado);
     return NextResponse.json({ plantas: resultado });
   } catch (error) {
     console.error("Error al obtener plantas:", error);

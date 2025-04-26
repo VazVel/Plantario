@@ -10,6 +10,27 @@ const Plantario = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const cerrarSesion = async () => {
+    try {
+      const response = await fetch("/api/cerrarsesion", {
+        method: "POST",
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log(data.mensaje);
+        router.push("/inicio");
+      } else {
+        console.error(data.error);
+        alert("No se pudo cerrar la sesión.");
+      }
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+      alert("Ocurrió un error al cerrar sesión.");
+    }
+  };
+
   const imagenes = {
     logo: "../img/logoInventario.png",
     icono: "../img/hoja.png",
@@ -26,7 +47,7 @@ const Plantario = () => {
         const data = await response.json();
 
         if (response.ok) {
-          setPlantas(data.plantas); // data.plantas debería tener campos id_planta y nombre_planta
+          setPlantas(data.plantas);
         } else {
           setError(data.error || "Error al obtener las plantas.");
         }
@@ -48,7 +69,6 @@ const Plantario = () => {
       </div>
     );
   }
-  
 
   return (
     <div className="plantario-container">
@@ -59,7 +79,7 @@ const Plantario = () => {
           <button className="icon-button" onClick={() => router.push('/riego')}>
             <img src={imagenes.notificacion || "/placeholder.svg"} alt="Notificaciones" className="icon" />
           </button>
-          <button className="icon-button" onClick={() => router.push('/inicio')}>
+          <button className="icon-button" onClick={cerrarSesion}>
             <img src={imagenes.cerrarsesion || "/placeholder.svg"} alt="Menú" className="icon" />
           </button>
         </div>
@@ -81,8 +101,18 @@ const Plantario = () => {
                 <img src={imagenes.icono || "/placeholder.svg"} alt="Planta" className="planta-icon" />
                 <span className="planta-nombre">{planta.nombre_planta}</span>
               </div>
-              <button className="config-button" onClick={() => router.push('/perfilPlanta')}>
-                <img src={imagenes.configuracion || "/placeholder.svg"} alt="Configurar" className="config-icon" />
+              <button
+                className="config-button"
+                onClick={() => {
+                  localStorage.setItem("id_planta", planta.id_planta);  // Guardar ID invisible
+                  router.push('/perfilPlanta');                          // Ir a perfil
+                }}
+              >
+                <img
+                  src={imagenes.configuracion || "/placeholder.svg"}
+                  alt="Configurar"
+                  className="config-icon"
+                />
               </button>
             </div>
           ))}
