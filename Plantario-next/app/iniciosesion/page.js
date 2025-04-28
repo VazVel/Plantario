@@ -39,7 +39,7 @@ const InicioSesion = () => {
       }
   
       // Redirigir al dashboard si todo está correcto
-      router.push("/registroplanta"); // Cambia esta ruta si es otra
+      router.push("/base"); // Cambia esta ruta si es otra
     } catch (err) {
       console.error("Error en el cliente:", err);
       setError("Error en el servidor");
@@ -96,7 +96,7 @@ const InicioSesion = () => {
 
             {error && <p className="error-message">{error}</p>}
 
-            <button type="submit" className="start-button"  onClick={() => router.push('/base')}>
+            <button type="submit" className="start-button">
                Comenzar
             </button>
           </form>
