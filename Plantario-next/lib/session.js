@@ -12,6 +12,7 @@ export const sessionOptions = {
 
 // Obtener sesión desde App Router
 export async function getSession() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies(); // <-- aquí agregas await
   return await getIronSession(cookieStore, sessionOptions);
 }
+

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import "../styles/base.css";
+import Swal from 'sweetalert2';
 
 // Rutas de las imágenes
 const IMAGES = {
@@ -28,7 +29,16 @@ const Plantario = () => {
 
       if (response.ok) {
         console.log(data.mensaje);
-        router.push("/inicio");
+        
+        await Swal.fire({
+          title: '¡Éxito!',
+          text: 'Sesión cerrada correctamente.',
+          icon: 'success',
+          confirmButtonColor: '#4caf50',
+          confirmButtonText: 'Aceptar'
+        });
+
+        router.push("/");
       } else {
         console.error(data.error);
         alert("No se pudo cerrar la sesión.");

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import "../styles/registro.css";
+import Swal from 'sweetalert2';
 
 
 const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
@@ -47,7 +48,15 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Registro exitoso");
+        
+        await Swal.fire({
+                  title: '¡Éxito!',
+                  text: 'Cuenta creada con exito.',
+                  icon: 'success',
+                  confirmButtonColor: '#4caf50',
+                  confirmButtonText: 'Aceptar'
+                });
+
         router.push("/iniciosesion");
         console.log("Usuario registrado:", data);
       } else {

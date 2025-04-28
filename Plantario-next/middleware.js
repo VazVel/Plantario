@@ -14,5 +14,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/base', '/inventario', '/registro', '/registroplanta'],  // Rutas que necesitan estar protegidas
+  matcher: ['/base', '/inventario', '/registroplanta'],  // Rutas que necesitan estar protegidas
 };

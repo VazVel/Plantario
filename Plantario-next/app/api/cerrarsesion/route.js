@@ -1,12 +1,14 @@
 // app/api/cerrarSesion/route.js
 import { NextResponse } from 'next/server';
-import { getSession } from '../../../lib/session';  // Asegúrate de importar correctamente la función getSession
+import { getIronSession } from "iron-session";
+import { sessionOptions } from "../../../lib/session"; // Importa solo las opciones, no getSession()
 
 export async function POST(req) {
-  const session = await getSession();  // Obtener la sesión actual
+  const res = new NextResponse(); // Creamos una respuesta
+
+  const session = await getIronSession(req, res, sessionOptions);
 
   if (session) {
-    // Eliminar la sesión
     await session.destroy();
     return NextResponse.json({ mensaje: "Sesión cerrada correctamente" });
   }
