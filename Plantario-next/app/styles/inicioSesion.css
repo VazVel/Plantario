@@ -18,10 +18,10 @@
     /*Cambie aqui */
   .content-wrapper {
     position: absolute;
-    top: 7%;
-    left: -5%;
+    top: 15%;
+    left: -13%;
     width: 100%;
-    height: 85%;
+    height: 63%;
     display: flex;
     flex-direction: row;
   }
