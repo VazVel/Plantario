@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import "../styles/inicioSesion.css";
+import Swal from 'sweetalert2';
 
 const InicioSesion = () => {
   const [correo, setCorreo] = useState("");
@@ -35,9 +36,22 @@ const InicioSesion = () => {
       // Si la respuesta no es OK, manejar el error
       if (!res.ok) {
         setError(data?.error || "Error al iniciar sesión");
+        await Swal.fire({
+          title: 'Error',
+          text: 'Correo o contraseña incorrectos.',
+          icon: 'error',
+          confirmButtonColor: '#f44336',
+          confirmButtonText: 'Intentar de nuevo'
+        });
         return;
       }
-  
+      await Swal.fire({
+                title: '¡Éxito!',
+                text: 'Sesión iniciada correctamente.',
+                icon: 'success',
+                confirmButtonColor: '#4caf50',
+                confirmButtonText: 'Aceptar'
+              });
       // Redirigir al dashboard si todo está correcto
       router.push("/base"); // Cambia esta ruta si es otra
     } catch (err) {
