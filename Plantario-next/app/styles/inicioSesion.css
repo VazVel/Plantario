@@ -80,7 +80,7 @@
   /*AQUI LE CAMBIE */
   .form-group > .ay{
     position: absolute;
-    top: 31%;
+    top: 33%;
   }
   .form-inputa {
     width: 100%;
@@ -89,6 +89,7 @@
     border-radius: 10px;
     background-color: #dbf7dc;
     font-size: 16px;
+    margin-top: 3%;
   }
 
   .form-group > .by{
@@ -102,7 +103,7 @@
     border-radius: 10px;
     background-color: #dbf7dc;
     font-size: 16px;
-    margin-top: 10%;
+    margin-top: 6.2%;
   }
   /*------------------------------------------- */
   .start-button {
