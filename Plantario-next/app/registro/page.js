@@ -58,7 +58,6 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
                 });
 
         router.push("/iniciosesion");
-        console.log("Usuario registrado:", data);
       } else {
         alert("Error en el registro: " + data.error);
       }
