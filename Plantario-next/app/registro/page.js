@@ -29,6 +29,17 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!nombre || !apellido1 || !apellido2 || !correo || !password) {
+      await Swal.fire({
+        title: 'Error',
+        text: 'Por favor, complete todos los campos obligatorios.',
+        icon: 'error',
+        confirmButtonColor: '#f44336',
+        confirmButtonText: 'Intentar de nuevo'
+      });
+      return; // No se envía la petición
+    }
+
     // Verifica que las contraseñas coincidan antes de enviar
     if (formData.password !== formData.confirmarpassword) {
       alert("Las contraseñas no coinciden");
@@ -110,7 +121,7 @@ const RegistroForm = ({ imagenFondo = "../img/fondo.png" }) => {
             <input type="password" id="confirmarpassword" name="confirmarpassword" value={formData.confirmarpassword} onChange={handleChange} required />
           </div>
 
-          <button type="submit" className="boton-comenzar" onClick={() => router.push('/base')}>
+          <button type="submit" className="boton-comenzar">
              Comenzar
           </button>
 

@@ -3,6 +3,8 @@
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 import "../styles/registroplanta.css";
+import Swal from 'sweetalert2';
+
 
 const Registrop = () => {
     const router = useRouter();
@@ -48,13 +50,19 @@ const Registrop = () => {
             setPodadoDias("");
 
             // Mostrar alerta de éxito
-            alert("Planta registrada exitosamente");
+            await Swal.fire({
+                title: '¡Éxito!',
+                text: 'Planta agregada',
+                icon: 'success',
+                confirmButtonColor: '#4caf50',
+                confirmButtonText: 'Aceptar'
+              });
 
             // Redirigir a la página de inventario después de que el usuario cierre la alerta
             router.push("/inventario");
 
         } catch (err) {
-            console.error("Error:", err);
+            //console.error("Error:", err);
             setError("Error al conectar con el servidor");
         }
     };
@@ -95,8 +103,6 @@ const Registrop = () => {
                                 <input type='number' id='diasPodar' value={podadoDias} onChange={(e) => setPodadoDias(e.target.value)} required />
                             </div>
 
-                            {error && <p className='error-message'>{error}</p>}
-                            {mensaje && <p className='success-message'>{mensaje}</p>}
 
                             <div className='botones-container'>
                                 <button type='submit' className='btn-guardar'>
