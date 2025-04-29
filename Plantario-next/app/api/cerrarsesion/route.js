@@ -1,17 +1,19 @@
-// app/api/cerrarSesion/route.js
 import { NextResponse } from 'next/server';
 import { getIronSession } from "iron-session";
-import { sessionOptions } from "../../../lib/session"; // Importa solo las opciones, no getSession()
+import { sessionOptions } from "../../../lib/session";
 
 export async function POST(req) {
-  const res = new NextResponse(); // Creamos una respuesta
+  const response = new Response(); // ✅ Web Response estándar
+  const session = await getIronSession(req, response, sessionOptions);
 
-  const session = await getIronSession(req, res, sessionOptions);
+  await session.destroy(); // ✅ Elimina la cookie de sesión
 
-  if (session) {
-    await session.destroy();
-    return NextResponse.json({ mensaje: "Sesión cerrada correctamente" });
-  }
+  const nextResponse = NextResponse.json({ mensaje: "Sesión cerrada correctamente" });
 
-  return NextResponse.json({ error: "No se pudo cerrar la sesión" }, { status: 500 });
+  // Copia los headers generados por iron-session (para eliminar la cookie)
+  response.headers.forEach((value, key) => {
+    nextResponse.headers.set(key, value);
+  });
+
+  return nextResponse;
 }
