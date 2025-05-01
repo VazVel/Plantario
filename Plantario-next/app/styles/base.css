@@ -31,7 +31,7 @@
   .plantario-header {
     background-color: var(--primary-green);
     color: var(--white);
-    padding: 15px 20px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,21 +67,30 @@
   
   /* Contenido principal */
   .plantario-content {
-    flex: 1;
+    min-height: 100vh; /* Toda la altura de la pantalla */
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Para centrar verticalmente */
   }
   
   .content-card {
+    margin-top: -7%;
     background-color: var(--white);
     border-radius: 10px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
+    min-height: 500px; /* o usa auto si quieres solo crecer según el contenido */
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
   /* Sección hero */
   .hero-section {
     display: flex;
@@ -182,36 +191,99 @@
   
   /* Responsivo */
   @media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
+    .plantario-header {
+      position: relative;
+      background-color: var(--primary-green);
+      color: var(--white);
+      padding: 20px;
       text-align: center;
     }
   
-    .hero-text {
-      margin-bottom: 20px;
+    .plantario-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0 auto;
+    }
+
+    .header-icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  
+    .icon-button {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .icon-button img {
+      width: 22px;
+      height: 22px;
+    }
+  
+    .hero-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
     }
   
     .hero-title {
+      font-size: 20px;
       max-width: 100%;
+    }
+  
+    .hero-subtitle {
+      font-size: 14px;
     }
   
     .hero-image {
       justify-content: center;
+      width: 100%;
+    }
+  
+    .hero-image img {
+      max-height: 200px;
+    }
+  
+    .new-plant-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .tools-title {
+      font-size: 18px;
     }
   
     .tools-grid {
       grid-template-columns: repeat(2, 1fr);
     }
-  }
   
-  @media (max-width: 480px) {
-    .content-card {
+    .tool-card {
       padding: 15px;
     }
   
-    .tools-grid {
-      grid-template-columns: 1fr;
+    .tool-icon {
+      width: 40px;
+      height: 40px;
     }
+  
+    .tool-name {
+      font-size: 13px;
+    }
+  
+    .content-card {
+      padding: 20px;
+      min-height: auto;
+      margin-top: 0;
+    }
+  
+    .plantario-content {
+      padding: 10px;
+      align-items: flex-start;
+    }
+
   }
   
   

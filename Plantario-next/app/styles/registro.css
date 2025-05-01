@@ -102,3 +102,62 @@ form {
   overflow: visible;
 }
 
+
+/* Estas medidas son para celular para que sea responsivo*/
+@media (max-width: 768px) {
+  .contenedor-principal {
+    width: 100%;
+    height: 100vh; 
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat; /* No se repite la imagen */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contenedor del formulario */
+  .contenedor-formulario {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 1000px; 
+    overflow: hidden; 
+    margin-top: -20%;
+  }
+  
+  .encabezado h1 {
+    font-size: 28px;
+  }
+
+  .encabezado h2 {
+    font-size: 18px;
+  }
+
+  .campo-formulario {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .campo-formulario label {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .campo-formulario input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .boton-comenzar {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* Ajustar el formulario a la altura de la pantalla */
+  form {
+    max-height: none;
+  }
+}

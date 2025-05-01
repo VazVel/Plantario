@@ -47,6 +47,7 @@
 
   /* Tarjeta de perfil */
   .perfil-card {
+    margin-top: -5%;
     background-color: white;
     border-radius: 8px;
     width: 100%;
@@ -64,12 +65,18 @@
   }
 
   .planta-fondo {
+    background-image: url(../../public/img/registroplanta.png);
+    background-repeat: no-repeat; /* Evita la duplicación */
     position: absolute;
     top: 16%;
-    left: 52%;
-    width: 40%;
+    left: 49%;
+    width: 30%;
     height: 80%;
-  }
+    object-fit: contain;
+    display: block;
+}
+
+  
 
   .planta-logo {
     width: 32px;
@@ -89,12 +96,25 @@
     margin-bottom: 30px;
   }
   
+
+
+
+
+
   @media (max-width: 768px) {
+    .planta-fondo {
+      display: none;
+    }
+    
     .form-grid {
       grid-template-columns: 1fr;
     }
   }
   
+  .perfil-card {
+    margin-top: 5%;
+   }
+
   .form-column {
     display: flex;
     flex-direction: column;
@@ -120,12 +140,12 @@
     background-color: #fff;
   }
   
-    /* Botones */
-    .botones-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-      }
+  /* Botones */
+  .botones-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
   .btn-guardar{
     display: flex;
@@ -151,3 +171,5 @@
     width: 18px;
     height: 18px;
   }
+
+ 
