@@ -1,101 +1,105 @@
 /* Estilos generales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #f0f0f0;
-  }
-  
-  /* Contenedor principal */
-  .plantario-container {
-    max-width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-    /* Encabezado */
-  .plantario-header {
-    background-color: #00c853;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .plantario-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    flex-grow: 1;
-  }
-
-  /* Contenido principal */
-  .plantario-content {
-    background-color: #c8f7d9;
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Tarjeta de perfil */
-  .perfil-card {
-    margin-top: -5%;
-    background-color: white;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 900px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título del perfil */
-  .perfil-titulo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .planta-fondo {
-    background-image: url(../../public/img/registroplanta.png);
-    background-repeat: no-repeat; /* Evita la duplicación */
-    position: absolute;
-    top: 16%;
-    left: 49%;
-    width: 30%;
-    height: 80%;
-    object-fit: contain;
-    display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-  
+body {
+  background-color: #f0f0f0;
+}
 
-  .planta-logo {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .perfil-heading {
-    color: #00c853;
-    font-size: 20px;
-  }
+/* Contenedor principal */
+.plantario-content {
+  background-color: #c8f7d9;
+  flex: 1;
+  padding: 20px; /* menos espacio arriba */
+  display: flex;
+  justify-content: flex-start; /* alinea arriba */
+  align-items: center;
+  position: relative;
+  min-height: calc(100vh - 80px); /* ajusta altura para evitar scroll innecesario */
+}
 
-  /* Formulario */
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
+/* Encabezado */
+.plantario-header {
+  background-color: #00c853;
+  color: white;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plantario-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Contenedor principal */
+.plantario-content {
+  background-color: #c8f7d9;
+  flex: 1;
+  padding: 40px 20px; /* ← espacio arriba y abajo para evitar usar margen negativo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Tarjeta de perfil */
+.perfil-card {
+  background-color: white;
+  position: relative;
+  top: -40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del perfil */
+.perfil-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.planta-fondo {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 16%;
+  left: 25%;
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  display: block;
+  z-index: 0;
+}
+
+/* Icono */
+.planta-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.perfil-heading {
+  color: #00c853;
+  font-size: 20px;
+}
+
+/* Formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
 
 
 
