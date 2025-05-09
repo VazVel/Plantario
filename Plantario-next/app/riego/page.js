@@ -38,7 +38,7 @@ const Riego = () => {
         </div>
       </header>
 
-      <main className='plantario-content'>
+      <main className='plantario-contentRiego'>
         <div className='gestion-title'>
           <img src={imagenes.icono} alt='Logo' className='logo-small' />
           <h2>Calendario de Tareas</h2>

@@ -32,12 +32,12 @@ const Plantario = () => {
   };
 
   const imagenes = {
-    logo: "../img/logoInventario.png",
-    icono: "../img/hoja.png",
-    configuracion: "../img/menu2.png",
-    notificacion: "../img/notificacion.png",
-    menu: "../img/menuBurger.png",
-    cerrarsesion: "../img/menu.png",
+    logo: "/img/logoInventario.png",
+    icono: "/img/hoja.png",
+    configuracion: "/img/menu2.png",
+    notificacion: "/img/notificacion.png",
+    menu: "/img/menuBurger.png",
+    cerrarsesion: "/img/menu.png",
   }
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Plantario = () => {
         </div>
       </header>
 
-      <main className="plantario-content">
+      <main className="plantario-content1">
         <div className="gestion-title">
           <img src={imagenes.logo || "/placeholder.svg"} alt="Logo" className="logo-small" />
           <h2>Gestionar Plantas</h2>

@@ -12,7 +12,7 @@
   
   /* Contenedor principal */
   .plantario-container {
-    max-width: 100%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
   }
   
   /* Contenido principal */
-  .plantario-content {
+  .plantario-content1 {
     background-color: #c8f7d9;
     flex: 1;
     padding: 20px;
