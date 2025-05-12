@@ -199,7 +199,7 @@
     margin-top: 10px;
   }
 
-  .plantario-content {
+  .plantario-content1 {
     padding: 15px;
     gap: 15px;
   }
@@ -272,3 +272,34 @@
     transform: translateX(175px);
   }
 }
+
+/* Estilos de carga */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.spinner {
+  border: 6px solid #cfe7d0;
+  border-top: 6px solid #4caf50;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: 500;
+}
+
