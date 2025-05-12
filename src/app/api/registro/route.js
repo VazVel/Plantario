@@ -1,4 +1,4 @@
-import { ejecutarConsulta } from "../../../lib/db"; // Asegúrate de que la ruta sea correcta
+import { ejecutarConsulta } from "../../../../lib/db"; // Asegúrate de que la ruta sea correcta
 import bcrypt from "bcrypt";
 
 export async function POST(req) {

@@ -1,4 +1,4 @@
-import { ejecutarConsulta } from '@/lib/db'; // Asegúrate de importar correctamente la función
+import { ejecutarConsulta } from '../../../../lib/db'; // Asegúrate de importar correctamente la función
 
 export async function POST(req) {
   try {

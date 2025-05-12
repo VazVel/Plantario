@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getIronSession } from "iron-session";
-import { sessionOptions } from "../../../lib/session";
-import { ejecutarConsulta } from "../../../lib/db";
+import { sessionOptions } from "../../../../lib/session";
+import { ejecutarConsulta } from "../../../../lib/db";
 
 // POST /api/registrar-planta
 export async function POST(req) {

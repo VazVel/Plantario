@@ -1,8 +1,8 @@
 import { getIronSession } from "iron-session";
-import { sessionOptions } from "@/lib/session"; // Usa alias @ si lo configuraste
+import { sessionOptions } from "../../../../lib/session"; // Usa alias @ si lo configuraste
 import { cookies } from "next/headers";
 import bcrypt from "bcrypt";
-import { ejecutarConsulta } from "@/lib/db";
+import { ejecutarConsulta } from "../../../../lib/db";
 
 export async function POST(req) {
   const cookieStore = await cookies();
