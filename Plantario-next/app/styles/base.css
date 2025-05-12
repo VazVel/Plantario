@@ -243,6 +243,7 @@ html, body {
   
     .hero-image img {
       max-height: 200px;
+      margin-top: -60%;
     }
   
     .new-plant-button {
@@ -252,7 +253,8 @@ html, body {
   
     .tools-title {
       font-size: 18px;
-    }
+      margin-top: -100%; /* Altura de los cuadros verdes*/
+     }
   
     .tools-grid {
       grid-template-columns: repeat(2, 1fr);
