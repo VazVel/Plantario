@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
-import "../styles/registroplanta.css";
+import "../styles/RegistroPlanta.css";
 import Swal from 'sweetalert2';
 
 
