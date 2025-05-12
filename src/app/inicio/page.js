@@ -1,7 +1,7 @@
 'use client'; 
 
 import { useRouter } from 'next/navigation';
-import '../../app/styles/Inicio.css'; 
+import '../styles/Inicio.css';
 
 const Inicio = () => {
   const router = useRouter();
