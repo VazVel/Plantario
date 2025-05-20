@@ -239,7 +239,7 @@ html, body {
     .hero-image {
       justify-content: center;
       width: 100%;
-      margin-top: -60%;
+      margin-top: -50%;
     }
   
     .hero-image img {
